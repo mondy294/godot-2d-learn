@@ -1,0 +1,24 @@
+---
+description: 本仓库的 GDScript 写法
+globs: "**/*.gd"
+alwaysApply: false
+---
+
+# GDScript
+
+- 缩进用 Tab，变量、参数和返回值写静态类型。
+- 函数和变量用 snake_case，常量用 CONSTANT_CASE，节点名用 PascalCase。
+- 发出信号写 `signal_name.emit()`，导出写 `@export`，节点引用写 `@onready`。
+- `extends` 下方用 `##` 写明职责、挂载节点和所属章节。
+
+```gdscript
+extends Node2D
+## 在出生点生成练习用的目标。
+## 挂载：Node2D，需要子节点 Marker2D（SpawnPoint）。
+## 章节：ch05
+
+@onready var spawn_point: Marker2D = $SpawnPoint
+```
+
+- 找不到节点或资源时用 `push_error` 写明路径。不要写空的 `pass` 把问题吞掉。
+- 学习示例默认不写 `class_name`。

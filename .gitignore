@@ -1,0 +1,27 @@
+# Godot 4 editor cache
+.godot/
+
+# Godot 3 import cache, kept in case an old tool writes it
+.import/
+
+# Generated translations
+*.translation
+
+# Local export output
+/build/
+/exports/
+
+# .NET / C# (this project uses GDScript)
+.mono/
+data_*/
+mono_crash.*.json
+.vs/
+*.csproj
+*.sln
+
+# OS and editor noise
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+~*
