@@ -4,9 +4,9 @@
 
 约定：
 
-- 路径形如 `lessons/ch06-input/scenes/` 和 `lessons/ch06-input/scripts/`
-- 示例场景在编辑器里打开后，用「运行当前场景」单独跑
+- 路径形如 `lessons/ch06-input/guide.md`、`README.md`、`scenes/` 和 `scripts/`
+- `guide.md` 是讲解，`README.md` 是运行命令和预期结果。各写什么见 `docs/workflow/lesson-materials.md`
+- 在仓库根目录执行 `godot --path . res://该场景.tscn`，或在编辑器中运行当前场景
 - 不把示例改成 `project.godot` 里的主场景
-- 每个示例目录附一份 `README.md`，写明它演示什么、怎么运行、屏幕上应该出现什么
 
 正式游戏仍放在仓库根部的 `scenes/` 和 `scripts/`。

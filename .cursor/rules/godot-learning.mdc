@@ -6,7 +6,7 @@ alwaysApply: true
 # 学习项目边界
 
 - 引擎用 Godot 4.7，语言用 GDScript。写代码前先读 `docs/standards/ai-coding.md`。
-- 用户点名某一章时，先读 `docs/specs/` 里对应 spec，只实现该章「以后生成示例时要覆盖的点」。
-- 课程示例放到 spec 里的 `lessons/chNN-.../`。在编辑器中运行当前场景来验证，不要改 `scenes/main` 和项目主场景，除非用户明确要求改游戏本体。
+- 用户点名某一章时，先读 `docs/specs/` 里对应 spec 和 `docs/workflow/lesson-materials.md`，只实现该章「以后生成示例时要覆盖的点」，并留下讲解 `guide.md`、运行说明 `README.md` 和可运行场景。
+- 课程示例放到 spec 里的 `lessons/chNN-.../`。用 `godot --path . res://该场景.tscn` 运行当前场景来验证，不要改 `scenes/main` 和项目主场景，除非用户明确要求改游戏本体。
 - 示例完成后，把该 spec 的状态改为「示例已生成」，并填写场景路径。
 - 注释用简体中文，写职责、挂载前提和意图。逐行翻译代码不符合 `docs/standards/comments.md`。

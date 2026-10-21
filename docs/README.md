@@ -12,7 +12,7 @@
 
 ## 怎么学某一章
 
-[workflow/study-with-ai.md](workflow/study-with-ai.md)。
+[workflow/study-with-ai.md](workflow/study-with-ai.md) 是开口方式。[workflow/lesson-materials.md](workflow/lesson-materials.md) 规定每一章要生成的讲解、运行说明和示例。
 
 ## 查阅
 

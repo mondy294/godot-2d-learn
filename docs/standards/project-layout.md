@@ -28,9 +28,10 @@ godot-2d-learn/
 
 ```
 lessons/ch09-movement/
-  README.md
+  guide.md           讲解
+  README.md          运行命令和预期结果
   scenes/
   scripts/
 ```
 
-运行方式写在该示例的 README：在编辑器中打开场景，运行当前场景。不要为此修改 `project.godot` 的 `run/main_scene`。
+各文件的内容见 `docs/workflow/lesson-materials.md`。运行命令写在该示例的 README。不要为此修改 `project.godot` 的 `run/main_scene`。

@@ -1,6 +1,6 @@
 # AI 写代码时的标准
 
-本文件是以后在这个仓库里生成代码的流程约定。命名、语法和注释的细节分别见同目录的 [naming.md](naming.md)、[gdscript-style.md](gdscript-style.md)、[comments.md](comments.md)。目录见 [project-layout.md](project-layout.md)。
+本文件是以后在这个仓库里生成代码的流程约定。命名、语法和注释的细节分别见同目录的 [naming.md](naming.md)、[gdscript-style.md](gdscript-style.md)、[comments.md](comments.md)。目录见 [project-layout.md](project-layout.md)。某一章要留下哪些讲解和示例，见 [../workflow/lesson-materials.md](../workflow/lesson-materials.md)。
 
 ## 动笔之前
 
@@ -11,10 +11,10 @@
 
 ## 文件怎么落
 
-- 课程示例写到 spec 里的「示例目录」。其下使用 `scenes/`、`scripts/` 和一份 `README.md`。
+- 课程示例写到 spec 里的「示例目录」。其下使用 `guide.md`、`README.md`、`scenes/` 和 `scripts/`。各文件写什么见 [../workflow/lesson-materials.md](../workflow/lesson-materials.md)。
 - 正式游戏才改 `scenes/`、`scripts/`、`assets/`。
 - 保持 `scenes/main/main.tscn` 可运行。不要把课程场景写成 `project.godot` 的主场景。
-- 示例的运行方式是：在编辑器中打开该场景，运行当前场景。
+- 示例的运行方式是：在仓库根目录执行 `godot --path . res://该场景.tscn`，或在编辑器中打开该场景后运行当前场景。两种方式等价。
 - 画面上需要汉字时，使用 `assets/fonts/` 里的字体。没有字体文件时，画面文字用英文或数字，中文说明放在输出面板和 README。
 
 ## 示例 README 要写清
@@ -30,7 +30,7 @@
 - 一个示例场景对应本章的一个关注点。需要两个关注点时拆成两个场景，不要合成一个大演示。
 - 遵守文件头注释、静态类型、`@export` / `@onready`、失败时 `push_error`。
 - 学习示例默认不声明 `class_name`。
-- 输入使用输入映射里的动作名。映射要在示例 README 里逐项写清，方便人手在编辑器里核对。
+- 输入使用输入映射里的动作名，动作名带章节前缀。映射和 Autoload 的追加方式见 [../workflow/lesson-materials.md](../workflow/lesson-materials.md)，并在示例 README 里逐项写清。
 - 不引入与本章无关的插件，不提前做存档、对象池、状态机框架，除非该章 spec 把它们列进了范围。
 
 ## 写完之后
