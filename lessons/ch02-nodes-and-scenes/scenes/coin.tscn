@@ -1,0 +1,10 @@
+; 道具场景，本身就能运行，窗口里会在原点看到一枚硬币。这一课再把它放进 level.tscn 使用两次。
+[gd_scene load_steps=1 format=3]
+
+; 根节点没有挂脚本。这个场景只保存「一枚硬币长什么样」。
+[node name="Coin" type="Node2D"]
+
+; parent="." 表示 Gem 挂在 Coin 下面，会跟着 Coin 移动。多边形的画法第 7 章再展开。
+[node name="Gem" type="Polygon2D" parent="."]
+color = Color(0.95, 0.76, 0.22, 1)
+polygon = PackedVector2Array(-16, 0, 0, -26, 16, 0, 0, 26)

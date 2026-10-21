@@ -1,6 +1,6 @@
 # 第 3 章：GDScript 基础
 
-- 状态：未开始
+- 状态：示例已生成
 - 前置：第 1 章
 - 示例目录：`lessons/ch03-gdscript-basics/`
 
@@ -34,7 +34,5 @@
 
 ## 示例记录
 
-学习生成示例后再填写。
-
-- 场景：
-- 日期：
+- 场景：`res://lessons/ch03-gdscript-basics/scenes/basics.tscn`
+- 日期：2026-10-21

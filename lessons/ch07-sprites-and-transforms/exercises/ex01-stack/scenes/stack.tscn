@@ -1,0 +1,54 @@
+; 场景文件。中括号是一段的标题。本课程不逐条讲这种存盘格式。
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://lessons/ch07-sprites-and-transforms/exercises/ex01-stack/scripts/stack.gd" id="1_stack"]
+[ext_resource type="Texture2D" path="res://lessons/ch07-sprites-and-transforms/sprites/mark.png" id="2_mark"]
+
+[node name="Stack" type="Node2D"]
+script = ExtResource("1_stack")
+
+; 两张图叠在同一位置。z_index 相同，后写进场景树的节点画在上面。习题要改绘制顺序。
+[node name="Back" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(480, 360)
+scale = Vector2(4, 4)
+texture = ExtResource("2_mark")
+centered = true
+
+[node name="Front" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(520, 360)
+scale = Vector2(4, 4)
+texture = ExtResource("2_mark")
+centered = true
+modulate = Color(0.4, 0.75, 1, 1)
+
+[node name="Carrier" type="Node2D" parent="."]
+position = Vector2(860, 360)
+
+; Rider 的 position 是相对 Carrier 的局部位置。
+[node name="Rider" type="Sprite2D" parent="Carrier"]
+position = Vector2(0, 70)
+scale = Vector2(3, 3)
+texture = ExtResource("2_mark")
+centered = true
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Title" type="Label" parent="UI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -420.0
+offset_top = -300.0
+offset_right = 420.0
+offset_bottom = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.929, 0.949, 0.961, 1)
+theme_override_font_sizes/font_size = 32
+text = "Exercise"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -4,7 +4,7 @@
 
 约定：
 
-- 路径形如 `lessons/ch06-input/guide.md`、`README.md`、`scenes/` 和 `scripts/`
+- 路径形如 `lessons/ch06-input/guide.md`、`README.md`、`scenes/` 和 `scripts/`。第 5 章起还有 `exercises/exNN-名称/`
 - `guide.md` 是讲解，`README.md` 是运行命令和预期结果。各写什么见 `docs/workflow/lesson-materials.md`
 - 在仓库根目录执行 `godot --path . res://该场景.tscn`，或在编辑器中运行当前场景
 - 不把示例改成 `project.godot` 里的主场景

@@ -11,7 +11,7 @@
 
 ## 文件怎么落
 
-- 课程示例写到 spec 里的「示例目录」。其下使用 `guide.md`、`README.md`、`scenes/` 和 `scripts/`。各文件写什么见 [../workflow/lesson-materials.md](../workflow/lesson-materials.md)。
+- 课程示例写到 spec 里的「示例目录」。其下使用 `guide.md`、`README.md`、`scenes/` 和 `scripts/`。第 5 章起再加 `exercises/`。各文件写什么见 [../workflow/lesson-materials.md](../workflow/lesson-materials.md)。
 - 正式游戏才改 `scenes/`、`scripts/`、`assets/`。
 - 保持 `scenes/main/main.tscn` 可运行。不要把课程场景写成 `project.godot` 的主场景。
 - 示例的运行方式是：在仓库根目录执行 `godot --path . res://该场景.tscn`，或在编辑器中打开该场景后运行当前场景。两种方式等价。
@@ -28,7 +28,7 @@
 ## 代码尺度
 
 - 一个示例场景对应本章的一个关注点。需要两个关注点时拆成两个场景，不要合成一个大演示。
-- 遵守文件头注释、静态类型、`@export` / `@onready`、失败时 `push_error`。
+- 遵守文件头注释、静态类型、`@export` / `@onready`、失败时 `push_error`。场景和 `project.godot` 的存盘格式注释见 [comments.md](comments.md)。
 - 学习示例默认不声明 `class_name`。
 - 输入使用输入映射里的动作名，动作名带章节前缀。映射和 Autoload 的追加方式见 [../workflow/lesson-materials.md](../workflow/lesson-materials.md)，并在示例 README 里逐项写清。
 - 不引入与本章无关的插件，不提前做存档、对象池、状态机框架，除非该章 spec 把它们列进了范围。

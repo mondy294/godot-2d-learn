@@ -1,6 +1,6 @@
 # 第 2 章：节点与场景
 
-- 状态：未开始
+- 状态：示例已生成
 - 前置：第 1 章
 - 示例目录：`lessons/ch02-nodes-and-scenes/`
 
@@ -33,7 +33,6 @@
 
 ## 示例记录
 
-学习生成示例后再填写。
-
-- 场景：
-- 日期：
+- 场景：`res://lessons/ch02-nodes-and-scenes/scenes/level.tscn`
+- 道具场景：`res://lessons/ch02-nodes-and-scenes/scenes/coin.tscn`
+- 日期：2026-10-21

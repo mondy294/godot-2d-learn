@@ -1,0 +1,124 @@
+; 场景文件。中括号是一段的标题。本课程不逐条讲这种存盘格式。
+[gd_scene load_steps=11 format=3]
+
+[ext_resource type="Script" path="res://lessons/ch08-animation/exercises/ex01-once/scripts/once.gd" id="1_once"]
+[ext_resource type="Texture2D" path="res://lessons/ch08-animation/sprites/walk_strip.png" id="2_strip"]
+[ext_resource type="Texture2D" path="res://lessons/ch08-animation/sprites/gem.png" id="3_gem"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0"]
+atlas = ExtResource("2_strip")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1"]
+atlas = ExtResource("2_strip")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2"]
+atlas = ExtResource("2_strip")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3"]
+atlas = ExtResource("2_strip")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_walk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 6.0
+}]
+
+[sub_resource type="Animation" id="Animation_blink"]
+resource_name = "blink"
+length = 1.0
+loop_mode = 0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Gem:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0.15)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_main"]
+_data = {
+&"blink": SubResource("Animation_blink")
+}
+
+[node name="Once" type="Node2D"]
+script = ExtResource("1_once")
+
+; 帧已经备好，autoplay 是空的，进场景不会自己播。
+[node name="Walker" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(480, 380)
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_walk")
+animation = &"walk"
+
+[node name="Gem" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(820, 380)
+scale = Vector2(4, 4)
+texture = ExtResource("3_gem")
+centered = true
+
+[node name="Clip" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("AnimationLibrary_main")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Title" type="Label" parent="UI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -420.0
+offset_top = -300.0
+offset_right = 420.0
+offset_bottom = -240.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.929, 0.949, 0.961, 1)
+theme_override_font_sizes/font_size = 32
+text = "Exercise"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Done" type="Label" parent="UI"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = 80.0
+offset_right = 200.0
+offset_bottom = 140.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.929, 0.949, 0.961, 1)
+theme_override_font_sizes/font_size = 28
+text = ""
+horizontal_alignment = 1
+
+[connection signal="animation_finished" from="Clip" to="." method="_on_clip_animation_finished"]

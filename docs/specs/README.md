@@ -7,14 +7,14 @@
 | 章 | 文件 | 学什么 | 状态 |
 | --- | --- | --- | --- |
 | 0 | [ch00-roadmap.spec.md](ch00-roadmap.spec.md) | 整条路线、仓库怎么用 | 未开始 |
-| 1 | [ch01-editor.spec.md](ch01-editor.spec.md) | 编辑器、运行、项目设置 | 未开始 |
-| 2 | [ch02-nodes-and-scenes.spec.md](ch02-nodes-and-scenes.spec.md) | 节点、场景、实例化 | 未开始 |
-| 3 | [ch03-gdscript-basics.spec.md](ch03-gdscript-basics.spec.md) | GDScript 语法和类型 | 未开始 |
-| 4 | [ch04-script-lifecycle.spec.md](ch04-script-lifecycle.spec.md) | 挂脚本、生命周期、节点引用 | 未开始 |
-| 5 | [ch05-signals.spec.md](ch05-signals.spec.md) | 信号和节点通信 | 未开始 |
-| 6 | [ch06-input.spec.md](ch06-input.spec.md) | 输入映射和读取输入 | 未开始 |
-| 7 | [ch07-sprites-and-transforms.spec.md](ch07-sprites-and-transforms.spec.md) | 精灵、坐标、层级 | 未开始 |
-| 8 | [ch08-animation.spec.md](ch08-animation.spec.md) | 帧动画和 AnimationPlayer | 未开始 |
+| 1 | [ch01-editor.spec.md](ch01-editor.spec.md) | 编辑器、运行、项目设置 | 示例已生成 |
+| 2 | [ch02-nodes-and-scenes.spec.md](ch02-nodes-and-scenes.spec.md) | 节点、场景、实例化 | 示例已生成 |
+| 3 | [ch03-gdscript-basics.spec.md](ch03-gdscript-basics.spec.md) | GDScript 语法和类型 | 示例已生成 |
+| 4 | [ch04-script-lifecycle.spec.md](ch04-script-lifecycle.spec.md) | 挂脚本、生命周期、节点引用 | 示例已生成 |
+| 5 | [ch05-signals.spec.md](ch05-signals.spec.md) | 信号和节点通信 | 示例已生成 |
+| 6 | [ch06-input.spec.md](ch06-input.spec.md) | 输入映射和读取输入 | 示例已生成 |
+| 7 | [ch07-sprites-and-transforms.spec.md](ch07-sprites-and-transforms.spec.md) | 精灵、坐标、层级 | 示例已生成 |
+| 8 | [ch08-animation.spec.md](ch08-animation.spec.md) | 帧动画和 AnimationPlayer | 示例已生成 |
 | 9 | [ch09-movement.spec.md](ch09-movement.spec.md) | 角色移动和重力 | 未开始 |
 | 10 | [ch10-collision.spec.md](ch10-collision.spec.md) | 碰撞层、遮罩、Area2D | 未开始 |
 | 11 | [ch11-tilemap.spec.md](ch11-tilemap.spec.md) | 用瓦片搭关卡 | 未开始 |

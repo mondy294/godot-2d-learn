@@ -32,6 +32,7 @@ lessons/ch09-movement/
   README.md          运行命令和预期结果
   scenes/
   scripts/
+  exercises/         第 5 章起，每题一个 exNN-名称/
 ```
 
 各文件的内容见 `docs/workflow/lesson-materials.md`。运行命令写在该示例的 README。不要为此修改 `project.godot` 的 `run/main_scene`。
